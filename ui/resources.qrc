@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pause.png</file>
+        <file>play.png</file>
+        <file>backward_s.png</file>
+        <file>backward_l.png</file>
+        <file>backward_m.png</file>
+        <file>forward_s.png</file>
+        <file>forward_l.png</file>
+        <file>forward_m.png</file>
+        <file>check.png</file>
+        <file>clack.png</file>
+        <file>repeat.png</file>
+    </qresource>
+</RCC>

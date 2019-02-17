@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>672</width>
+    <height>238</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Rocust</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QSlider" name="sldr_position">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>631</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>1000</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sldr_volum">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>75</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="spinbox_speed">
+    <property name="geometry">
+     <rect>
+      <x>601</x>
+      <y>50</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>0.100000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>2.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.100000000000000</double>
+    </property>
+    <property name="value">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_play_time">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>50</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>00:00:00/00:00:00</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_play">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>110</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_play {
+	background-color: transparent;
+	border-image: url(:/play.png);
+	background: none;
+	border: none;
+	background-repeat: none;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_check_point">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>100</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>SizeVerCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>00:00:00</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_backward_s">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>120</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_backward_s {
+	background-color: transparent;
+	border-image: url(:/backward_s.png);
+	background: none;
+	border: none;
+	background-repeat: none;
+	}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_backward_m">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>120</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_backward_m {
+	background-color: transparent;
+	border-image: url(:/backward_m.png);
+	background: none;
+	border: none;
+	background-repeat: none;
+	}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_backward_l">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>120</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_backward_l {
+	background-color: transparent;
+	border-image: url(:/backward_l.png);
+	background: none;
+	border: none;
+	background-repeat: none;
+	} 
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_get_goback_pos">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>100</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_get_goback_pos {
+	background-color: transparent;
+	border-image: url(:/check.png);
+	background: none;
+	border: none;
+	background-repeat: none;
+	}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_forward_l">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>120</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_forward_l {
+	background-color: transparent;
+	border-image: url(:/forward_l.png);
+	background: none;
+	border: none;
+	background-repeat: none;
+	}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_forward_m">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>120</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_forward_m {
+	background-color: transparent;
+	border-image: url(:/forward_m.png);
+	background: none;
+	border: none;
+	background-repeat: none;
+	}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_goback">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>120</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_goback {
+	background-color: transparent;
+	border-image: url(:/repeat.png);
+	background: none;
+	border: none;
+	background-repeat: none;
+	}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>672</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Open_File"/>
+    <addaction name="actionRecent_File"/>
+   </widget>
+   <widget class="QMenu" name="menuPlay">
+    <property name="title">
+     <string>&amp;Play</string>
+    </property>
+    <addaction name="actionPlayPause"/>
+    <addaction name="actionStop"/>
+    <addaction name="separator"/>
+    <addaction name="actionBackward_s"/>
+    <addaction name="actionBackward_m"/>
+    <addaction name="actionBackward_l"/>
+    <addaction name="separator"/>
+    <addaction name="actionForward_m"/>
+    <addaction name="actionForward_l"/>
+    <addaction name="separator"/>
+    <addaction name="actionSpeed_Up"/>
+    <addaction name="actionSpeed_Down"/>
+    <addaction name="separator"/>
+    <addaction name="actionCheck_Point"/>
+    <addaction name="actionGo_Back_To_Point"/>
+    <addaction name="separator"/>
+    <addaction name="actionVolume_Up"/>
+    <addaction name="actionVolume_Down"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionA_Bout_Rocust"/>
+    <addaction name="actionShort_Cut"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuPlay"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Open_File">
+   <property name="text">
+    <string>&amp;Open...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionRecent_File">
+   <property name="text">
+    <string>Open Recent</string>
+   </property>
+  </action>
+  <action name="actionA_Bout_Rocust">
+   <property name="text">
+    <string>A&amp;Bout Rocust</string>
+   </property>
+  </action>
+  <action name="actionShort_Cut">
+   <property name="text">
+    <string>Short&amp;Cut</string>
+   </property>
+  </action>
+  <action name="actionPlayPause">
+   <property name="text">
+    <string>Play/Pause</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="text">
+    <string>Pause</string>
+   </property>
+  </action>
+  <action name="actionBackward_s">
+   <property name="text">
+    <string>Backward(s)</string>
+   </property>
+   <property name="shortcut">
+    <string>V</string>
+   </property>
+  </action>
+  <action name="actionBackward_m">
+   <property name="text">
+    <string>Backward(m)</string>
+   </property>
+   <property name="shortcut">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="actionBackward_l">
+   <property name="text">
+    <string>Backward(l)</string>
+   </property>
+   <property name="shortcut">
+    <string>X</string>
+   </property>
+  </action>
+  <action name="actionForwad_s">
+   <property name="text">
+    <string>Forward(s)</string>
+   </property>
+  </action>
+  <action name="actionForward_m">
+   <property name="text">
+    <string>Forward(m)</string>
+   </property>
+   <property name="shortcut">
+    <string>N</string>
+   </property>
+  </action>
+  <action name="actionForward_l">
+   <property name="text">
+    <string>Forward(l)</string>
+   </property>
+   <property name="shortcut">
+    <string>M</string>
+   </property>
+   <property name="shortcutVisibleInContextMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSpeed_Up">
+   <property name="text">
+    <string>Speed Up</string>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+   <property name="shortcutVisibleInContextMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSpeed_Down">
+   <property name="text">
+    <string>Speed Down</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+   <property name="shortcutVisibleInContextMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionCheck_Point">
+   <property name="text">
+    <string>Check Point</string>
+   </property>
+   <property name="shortcut">
+    <string>G</string>
+   </property>
+  </action>
+  <action name="actionGo_Back_To_Point">
+   <property name="text">
+    <string>Go Back To Point</string>
+   </property>
+   <property name="shortcut">
+    <string>B</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="shortcut">
+    <string>Backspace</string>
+   </property>
+  </action>
+  <action name="actionVolume_Up">
+   <property name="text">
+    <string>Volume Up</string>
+   </property>
+   <property name="shortcut">
+    <string>Up</string>
+   </property>
+  </action>
+  <action name="actionVolume_Down">
+   <property name="text">
+    <string>Volume Down</string>
+   </property>
+   <property name="shortcut">
+    <string>Down</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action_Open_File</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_play</sender>
+   <signal>released()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>play_pause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>315</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPlayPause</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>play_pause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sldr_position</sender>
+   <signal>sliderReleased()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>start_timer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>335</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sldr_position</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>set_position()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>335</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sldr_position</sender>
+   <signal>sliderPressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>stop_timer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>335</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_backward_s</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>backward_s()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_backward_m</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>backward_m()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>195</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_backward_l</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>backward_l()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_forward_l</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>forward_l()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_get_goback_pos</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>check_point()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_forward_m</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>forward_m()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_goback</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>go_back_to_point()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>395</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCheck_Point</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>check_point()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionBackward_s</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>backward_s()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionBackward_l</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>backward_l()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionBackward_m</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>backward_m()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionStop</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>stop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionForward_l</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>forward_l()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionForward_m</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>forward_m()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionGo_Back_To_Point</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>go_back_to_point()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>open_file()</slot>
+  <slot>play_pause()</slot>
+  <slot>stop()</slot>
+  <slot>backward_s()</slot>
+  <slot>backward_m()</slot>
+  <slot>backward_l()</slot>
+  <slot>forward_m()</slot>
+  <slot>forward_l()</slot>
+  <slot>speed_up()</slot>
+  <slot>speed_down()</slot>
+  <slot>check_point()</slot>
+  <slot>go_back_to_point()</slot>
+  <slot>volume_up()</slot>
+  <slot>volume_down()</slot>
+  <slot>volume_adjust()</slot>
+  <slot>speed_adjust()</slot>
+  <slot>set_position()</slot>
+  <slot>start_timer()</slot>
+  <slot>stop_timer()</slot>
+ </slots>
+</ui>
